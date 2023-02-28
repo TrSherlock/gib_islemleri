@@ -5,7 +5,7 @@ const jp = JSON.stringify({
     "idariBilgiler": {
         "vdKodu": "016254",
         "tip": 1,
-        "ay": "01",
+        "ay": "02",
         "baslangicAyi": "",
         "bitisAyi": "",
         "doneminBitisAyi": "",
