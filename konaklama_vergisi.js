@@ -1,4 +1,94 @@
-const postdata = "cmd=taslakBeyannameService_saveBeyanname&callid=806323c71f4e2-20&token=c99a631046ea2eef289a06c82dff16dfcb768cb9ec496e77de85a1dc425bf9587a1d804943240de911c8f90805e5bdae8f47e98a47cedac37102b525ab4958a2&jp={"idariBilgiler":{"vdKodu":"016254","tip":1,"ay":"01","baslangicAyi":"","bitisAyi":"","doneminBitisAyi":"","bitisYili":"","donem":"","yil":"2023","dilim":"","baslangicTarihi":"","bitisTarihi":"","tur":"","taslakOid":"1xleleq5n313d6","beyannameTuru":"KONAKLAMA_1","subeKodu":null,"beyannameTuruForDonem":"-1"},"mukellef":{"tcKimlikNo":"","vergiNo":"7150060966","soyadi":"ÖZTÜRK VE ORT.","adi":"MEHMET","ticSicilNo":"","eposta":"","alanKodu":"224","telNo":"2448131"},"tesisBildirimler":{"konaklamaTesisler":[{"tesisTur":"001","ilIlce":"01616","tesisAd":"ÇAMLIBEL OTEL","adresNo":"1618316580","matrah":"40663.64","vergiOran":"2","hesaplananVergi":"813.27"}],"toplamMatrah":"40663.64","toplamVergi":"813.27","istisnalar":[]},"vergiBildirimleri":{"vergiBildirimler":[{"tesisTur":"001","matrah":"40663.64","hesaplananVergi":"813.27"}],"toplamMatrah":"40663.64","toplamVergi":"813.27"},"ekler":{"diplomatikBilgiler":[],"tutar":"0"},"kullaniciBilgileri":{"kendisi":true,"mirasci":false,"temsilci":false,"sorumlu":false,"diger":false,"tcKimlikNo":"","vergiNo":"7150060966","soyadi":"ÖZTÜRK VE ORT.","adi":"MEHMET","ticSicilNo":"","eposta":"","alanKodu":"224","telNo":"2448131"},"kullaniciBilgileri1":{"tcKimlikNo":"","vergiNo":"4170085434","soyadi":"GÜLER","adi":"HAKAN","ticSicilNo":"","eposta":"hakanguler1968@hotmail.com","alanKodu":"224","telNo":"2222738"}}"
+const cmd = "taslakBeyannameService_saveBeyanname";
+const callid = "806323c71f4e2-20";
+const token = "c99a631046ea2eef289a06c82dff16dfcb768cb9ec496e77de85a1dc425bf9587a1d804943240de911c8f90805e5bdae8f47e98a47cedac37102b525ab4958a2";
+const jp = JSON.stringify({
+    "idariBilgiler": {
+        "vdKodu": "016254",
+        "tip": 1,
+        "ay": "01",
+        "baslangicAyi": "",
+        "bitisAyi": "",
+        "doneminBitisAyi": "",
+        "bitisYili": "",
+        "donem": "",
+        "yil": "2023",
+        "dilim": "",
+        "baslangicTarihi": "",
+        "bitisTarihi": "",
+        "tur": "",
+        "taslakOid": "1xleleq5n313d6",
+        "beyannameTuru": "KONAKLAMA_1",
+        "subeKodu": null,
+        "beyannameTuruForDonem": "-1"
+    },
+    "mukellef": {
+        "tcKimlikNo": "",
+        "vergiNo": "7150060966",
+        "soyadi": "ÖZTÜRK VE ORT.",
+        "adi": "MEHMET",
+        "ticSicilNo": "",
+        "eposta": "",
+        "alanKodu": "224",
+        "telNo": "2448131"
+    },
+    "tesisBildirimler": {
+        "konaklamaTesisler": [
+            {
+                "tesisTur": "001",
+                "ilIlce": "01616",
+                "tesisAd": "ÇAMLIBEL OTEL",
+                "adresNo": "1618316580",
+                "matrah": "40663.64",
+                "vergiOran": "2",
+                "hesaplananVergi": "813.27"
+            }
+        ],
+        "toplamMatrah": "40663.64",
+        "toplamVergi": "813.27",
+        "istisnalar": []
+    },
+    "vergiBildirimleri": {
+        "vergiBildirimler": [
+            {
+                "tesisTur": "001",
+                "matrah": "40663.64",
+                "hesaplananVergi": "813.27"
+            }
+        ],
+        "toplamMatrah": "40663.64",
+        "toplamVergi": "813.27"
+    },
+    "ekler": {
+        "diplomatikBilgiler": [],
+        "tutar": "0"
+    },
+    "kullaniciBilgileri": {
+        "kendisi": true,
+        "mirasci": false,
+        "temsilci": false,
+        "sorumlu": false,
+        "diger": false,
+        "tcKimlikNo": "",
+        "vergiNo": "7150060966",
+        "soyadi": "ÖZTÜRK VE ORT.",
+        "adi": "MEHMET",
+        "ticSicilNo": "",
+        "eposta": "",
+        "alanKodu": "224",
+        "telNo": "2448131"
+    },
+    "kullaniciBilgileri1": {
+        "tcKimlikNo": "",
+        "vergiNo": "4170085434",
+        "soyadi": "GÜLER",
+        "adi": "HAKAN",
+        "ticSicilNo": "",
+        "eposta": "hakanguler1968@hotmail.com",
+        "alanKodu": "224",
+        "telNo": "2222738"
+    }
+});
+
 fetch("https://intvrg.gib.gov.tr/intvrg_server/dispatch", {
   "headers": {
     "accept": "application/json, text/javascript, */*; q=0.01",
